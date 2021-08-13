@@ -20,8 +20,10 @@ df_data["Vente"] = lst_vente
 
 
 #%% API Call
+# For localhost use
 # url = "http://localhost:5000/api/predict"
-url = "https://flask-power-apps.herokuapp.com/api/predict"
+# for webapp use
+url = "http://flask-power-apps.herokuapp.com/api/predict"
 
 data = df_data.to_dict(orient="records")
 headers = {
