@@ -10,6 +10,7 @@ import numpy as np
 import pickle as p
 import json
 import pandas as pd
+import os
 
 app = Flask(__name__)
 
@@ -33,4 +34,7 @@ def makecalc():
 if __name__ == '__main__':
     # modelfile = 'models/final_prediction.pickle'
     # model = p.load(open(modelfile, 'rb'))
-    app.run(debug=True, host='0.0.0.0')
+    # app.run(debug=True, host='0.0.0.0')
+    
+    port = int(os.environ.get("PORT", 5000))
+    app.run(debug=True, host='0.0.0.0', port=port)

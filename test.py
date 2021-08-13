@@ -20,7 +20,9 @@ df_data["Vente"] = lst_vente
 
 
 #%% API Call
-url = "http://localhost:5000/api/predict"
+# url = "http://localhost:5000/api/predict"
+url = "https://flask-power-apps.herokuapp.com/api/predict"
+
 data = df_data.to_dict(orient="records")
 headers = {
             "multiplier": "-1"
